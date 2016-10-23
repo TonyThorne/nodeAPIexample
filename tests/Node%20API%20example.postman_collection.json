@@ -3,7 +3,8 @@
 	"name": "Node API example",
 	"description": "Example using books",
 	"order": [
-		"1ae75c4a-6495-4bcd-e091-7b26c67cc147"
+		"1ae75c4a-6495-4bcd-e091-7b26c67cc147",
+		"6224efe8-205b-5e96-b2ea-542b1b290a3c"
 	],
 	"folders": [],
 	"timestamp": 1477253500276,
@@ -14,21 +15,37 @@
 			"id": "1ae75c4a-6495-4bcd-e091-7b26c67cc147",
 			"headers": "",
 			"url": "{{url}}{{port}}{{route}}books",
-			"pathVariables": {},
 			"preRequestScript": null,
+			"pathVariables": {},
 			"method": "GET",
-			"collectionId": "5f55e93a-0c3d-98be-3717-1e0dbc2ec4ad",
 			"data": null,
 			"dataMode": "params",
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"Book 1\");\n\n\n\nvar schema = {\n \"items\": {\n \"type\": \"boolean\"\n }\n};\nvar data1 = [true, false];\n\ntests[\"Valid Data1\"] = tv4.validate(data1, schema);\n\nconsole.log(\"Validation failed: \", tv4.error);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1477256734390,
 			"name": "{{url}}{{port}}{{route}}books",
 			"description": "Get books",
-			"descriptionFormat": "html",
-			"time": 1477254272576,
-			"version": 2,
-			"responses": [],
-			"tests": null,
+			"collectionId": "5f55e93a-0c3d-98be-3717-1e0dbc2ec4ad",
+			"responses": []
+		},
+		{
+			"id": "6224efe8-205b-5e96-b2ea-542b1b290a3c",
+			"headers": "",
+			"url": "{{url}}{{port}}{{route}}books",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": "tests[\"Body matches string\"] = responseBody.has(\"Book 1\");\n\n\n\nvar schema = {\n \"items\": {\n \"type\": \"boolean\"\n }\n};\nvar data1 = [true, false];\n\ntests[\"Valid Data1\"] = tv4.validate(data1, schema);\n\nconsole.log(\"Validation failed: \", tv4.error);",
 			"currentHelper": "normal",
-			"helperAttributes": {}
+			"helperAttributes": {},
+			"time": 1477256734390,
+			"name": "{{url}}{{port}}{{route}}books copy",
+			"description": "Get books",
+			"collectionId": "5f55e93a-0c3d-98be-3717-1e0dbc2ec4ad",
+			"responses": []
 		}
 	]
 }
