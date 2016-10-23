@@ -1,0 +1,24 @@
+{
+  "name": "node_api_example",
+  "version": "0.0.1",
+  "description": "Learning to build an API using shamadeh.com blog example",
+  "main": "index.js",
+  "scripts": {
+    "test": "testit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TonyThorne/nodeAPIexample.git"
+  },
+  "keywords": [
+    "node",
+    "api",
+    "learning"
+  ],
+  "author": "Tony Thorne",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TonyThorne/nodeAPIexample/issues"
+  },
+  "homepage": "https://github.com/TonyThorne/nodeAPIexample#readme"
+}
