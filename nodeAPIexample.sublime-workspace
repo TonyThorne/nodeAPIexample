@@ -12,11 +12,22 @@
 	"buffers":
 	[
 		{
-			"file": "README.md",
+			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 40,
-				"line_ending": "Windows"
+				"buffer_size": 613,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "server.js",
+			"settings":
+			{
+				"buffer_size": 1890,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "// Module dependencies."
 			}
 		}
 	],
@@ -52,7 +63,8 @@
 	},
 	"expanded_folders":
 	[
-		"/C/A/nodescripts/2016/nodeAPIexample/nodeAPIexample"
+		"/C/A/nodescripts/2016/nodeAPIexample/nodeAPIexample",
+		"/C/A/nodescripts/2016/nodeAPIexample/nodeAPIexample/node_modules"
 	],
 	"file_history":
 	[
@@ -91,29 +103,62 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "README.md",
-					"semi_transient": true,
+					"file": "package.json",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 40,
+						"buffer_size": 613,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								200,
+								200
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "server.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1890,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1890,
+								1890
+							]
+						],
+						"settings":
+						{
+							"auto_name": "// Module dependencies.",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

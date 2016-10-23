@@ -1,0 +1,34 @@
+{
+	"id": "5f55e93a-0c3d-98be-3717-1e0dbc2ec4ad",
+	"name": "Node API example",
+	"description": "Example using books",
+	"order": [
+		"1ae75c4a-6495-4bcd-e091-7b26c67cc147"
+	],
+	"folders": [],
+	"timestamp": 1477253500276,
+	"owner": "10276",
+	"public": false,
+	"requests": [
+		{
+			"id": "1ae75c4a-6495-4bcd-e091-7b26c67cc147",
+			"headers": "",
+			"url": "{{url}}{{port}}{{route}}books",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "5f55e93a-0c3d-98be-3717-1e0dbc2ec4ad",
+			"data": null,
+			"dataMode": "params",
+			"name": "{{url}}{{port}}{{route}}books",
+			"description": "Get books",
+			"descriptionFormat": "html",
+			"time": 1477254272576,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
