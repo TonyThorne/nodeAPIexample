@@ -1,3 +1,4 @@
+// Author Tony Thorne
 // Module dependencies.
 var application_root = __dirname,
     express = require( 'express' ); //Web framework
@@ -68,7 +69,7 @@ app.delete( '/api/books/:id', function( request, response ) {
 });
 
 //Start server
-var port = 4711;
+var port = 80;
 app.listen( port, function() {
     console.log( 'Express server listening on port %d in %s mode', port, app.settings.env );
 });
