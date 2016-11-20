@@ -25,7 +25,9 @@ var router = express.Router();              // get an instance of the express Ro
 router.get('/', function(req, res) {
     res.json({ message: 'hooray! welcome to our api!' });   
 });
-
+router.get('/books', function(req, res) {
+    res.json({ message: 'Books go here' });   
+});
 // more routes for our API will happen here
 
 // REGISTER OUR ROUTES -------------------------------
