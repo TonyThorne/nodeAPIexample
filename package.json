@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "description": "Learning to build an API using shamadeh.com blog example",
   "dependencies": {
-    "express":  "~3.1.0"
-    },
+    "express": "^4.14.0",
+    "body-parser": "*"
+  },
   "main": "server.js",
   "scripts": {
     "test": "testit"

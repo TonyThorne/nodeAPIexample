@@ -1,75 +1,39 @@
 // Author Tony Thorne
 // Module dependencies.
-var application_root = __dirname,
-    express = require( 'express' ); //Web framework
+// server.js
 
-//Create server
-var app = express();
+// BASE SETUP
+// =============================================================================
 
-// Configure server
-app.configure( function() {
-    //parses request body and populates request.body
-    app.use( express.bodyParser() );
+// call the packages we need
+var express    = require('express');        // call express
+var app        = express();                 // define our app using express
+var bodyParser = require('body-parser');
 
-    //checks request.body for HTTP method overrides
-    app.use( express.methodOverride() );
+// configure app to use bodyParser()
+// this will let us get the data from a POST
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
-    //perform route lookup based on url and HTTP method
-    app.use( app.router );
+var port = process.env.PORT || 8080;        // set our port
 
-    //Show all errors in development
-    app.use( express.errorHandler({ dumpExceptions: true, showStack: true }));
+// ROUTES FOR OUR API
+// =============================================================================
+var router = express.Router();              // get an instance of the express Router
+
+// test route to make sure everything is working (accessed at GET http://localhost:8080/api)
+router.get('/', function(req, res) {
+    res.json({ message: 'hooray! welcome to our api!' });   
 });
 
-//Router
-//Get a list of all books
-app.get( '/api/books', function( request, response ) {
-    var books = [
-            {
-                title: "Book 1",
-                author: "Author 1",
-                releaseDate: "01/01/2014"
-            },
-            {
-                title: "Book 2",
-                author: "Author 2",
-                releaseDate: "02/02/2014"
-            }
-        ];
+// more routes for our API will happen here
 
-    response.send(books);
-});
-//Insert a new book
-app.post( '/api/books', function( request, response ) {
-    var book = {
-        title: request.body.title,
-        author: request.body.author,
-        releaseDate: request.body.releaseDate
-    };
-    
-    response.send(book);
-});
-//Get a single book by id
-app.get( '/api/books/:id', function( request, response ) {
-    var book = {
-        title: "Unique Book",
-        author: "Unique Author",
-        releaseDate: "03/03/2014"
-    };
-    
-    response.send(book);
-});
-//Update a book
-app.put( '/api/books/:id', function( request, response ) {
-    response.send("Updated!");
-});
-//Delete a book
-app.delete( '/api/books/:id', function( request, response ) {
-    response.send("Deleted");
-});
+// REGISTER OUR ROUTES -------------------------------
+// all of our routes will be prefixed with /api
+app.use('/api', router);
 
-//Start server
-var port = 80;
-app.listen( port, function() {
-    console.log( 'Express server listening on port %d in %s mode', port, app.settings.env );
-});
+// START THE SERVER
+// =============================================================================
+app.listen(port);
+console.log('Magic happens on port ' + port);
+
